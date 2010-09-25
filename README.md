@@ -36,7 +36,7 @@ Make some refactoring
 
 ## Thanks
 
-Especial thanks to:
+Special thanks to:
 Tapajós [http://twitter.com/tapajos]
 Sylvestre Mergulhão [http://twitter.com/smergulhao]
 
