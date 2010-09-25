@@ -22,7 +22,7 @@ Devise is a flexible authentication solution for Rails based on Warden. Devise s
 
 1. Create a Rails Application
 2. Configure Devise
-3. Put this [http://github.com/lucasrenan/CouchRest-Model-ORM-for-Devise/blob/master/couchrestmodel.rb](file) into the lib directory in your rails application
+3. Put this [file](http://github.com/lucasrenan/CouchRest-Model-ORM-for-Devise/blob/master/couchrestmodel.rb) into the lib directory in your rails application
 4. Change the require path in devise.rb initializer, something like this: require "#{Rails.root}/lib/orm/couchrestmodel"
 
 Now your application is ready to use Devise with CouchDB =)
