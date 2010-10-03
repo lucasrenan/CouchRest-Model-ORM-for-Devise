@@ -39,13 +39,18 @@ module Devise
 
         def find(*args)
           options = args.extract_options!
-          raise "You can't search with more than one condition yet =(" if options[:conditions].keys.size > 1
-          
-          find_by_key_and_value(options[:conditions].keys.first, options[:conditions].values.first)
+
+          if options.present?
+            raise "You can't search with more than one condition yet =(" if options[:conditions].keys.size > 1
+            find_one_by_key_and_value(options[:conditions].keys.first, options[:conditions].values.first)
+          else
+            id = args.flatten.compact.uniq.to_s
+            find_one_by_key_and_value(:id, id)
+          end
         end
 
         private
-        def find_by_key_and_value(key, value)
+        def find_one_by_key_and_value(key, value)
           if key == :id
             get(value)
           else
