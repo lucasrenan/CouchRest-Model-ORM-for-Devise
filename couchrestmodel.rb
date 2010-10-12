@@ -15,7 +15,7 @@ module Devise
           authentication_keys.each do |key_name|
             view_by key_name
           end
-          view_by :confirmation_token
+          view_by :remember_token
         end
       end
 
